@@ -1,0 +1,8 @@
+        <label>Remind Dev Integrations Team:</label>
+        <div ng-repeat="daysLength in event.priorDaysToSendReminderEmails">
+          <input type="textbox" ng-model="daysLength.days">
+          <label>days prior</label>
+          <button class="btn btn-primary" ng-click="addDayToSendReminderEmail()">+</button>
+          <button class="btn btn-primary" ng-click="removeDayToSendReminderEmail($index)">-</button>
+        </div>
+        <button class="btn btn-primary" ng-if="event.priorDaysToSendReminderEmails.length === 0" ng-click="addDayToSendReminderEmail($index)">+</button>

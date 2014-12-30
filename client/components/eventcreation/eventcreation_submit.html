@@ -1,0 +1,15 @@
+        <div ng-hide="!event.isNew">
+          <div ng-if="event.isNew">
+            <button type="submit" class="btn btn-primary" ng-click="addEvent()">Create</button>
+          </div>
+        </div>
+        <div ng-hide="event.isNew" class="animate-if">
+          <span ng-if="!event.isNew">
+            <button type="submit" class="btn btn-primary" ng-click="updateEvent()">Update</button>
+          </span>
+
+          <span ng-if="!event.isNew">
+            <button type="submit" class="btn btn-primary" ng-click="deleteEvent()">Delete</button>
+          </span>
+        </div>
+

@@ -1,0 +1,501 @@
+label {
+  text-shadow: 0px 1px #fff;
+}
+.event-form {
+  margin: 20px 0;
+}
+.event-form div {
+  margin-bottom: 10px;
+}
+.event-form input {
+  width: 30px;
+}
+#search-term {
+  width: 100px;
+}
+#banner {
+  border-bottom: none;
+  margin-top: -20px;
+  padding: 20px;
+}
+#banner h1 {
+  font-size: 60px;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+.hero-unit {
+  position: relative;
+  padding: 30px 15px;
+  color: #F5F5F5;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  background: #4393B9;
+  background: -webkit-linear-gradient(#858A80, #789);
+  /* For Safari 5.1 to 6.0 */
+  
+  background: -o-linear-gradient(#858A80, #789);
+  /* For Opera 11.1 to 12.0 */
+  
+  background: -moz-linear-gradient(#858A80, #789);
+  /* For Firefox 3.6 to 15 */
+  
+  background: linear-gradient(#858A80, #789);
+  /* Standard syntax */
+}
+.footer {
+  text-align: center;
+  padding: 30px 0;
+  margin-top: 70px;
+  border-top: 1px solid #E5E5E5;
+  /* position:fixed; */
+  
+  bottom: 0px;
+  background: #F0F0F0;
+  border-top: thin solid #CCC;
+  width: 100%;
+}
+.calendar {
+  margin-left: 25px;
+  border-bottom: thin solid #AAA;
+  width: 96%;
+  margin-top: 25px;
+}
+.calendar-grid {
+  width: 100%;
+}
+.calendar-row {
+  background: #F0F0F0;
+  height: 100%;
+  overflow: auto;
+  zoom: 100%;
+}
+#ics-container {
+  position: absolute;
+  width: 100px;
+  height: 50px;
+}
+#ics-button-open {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  padding: 3px;
+}
+#ics-button-download {
+  position: absolute;
+  left: 62px;
+  top: 22px;
+  padding: 3px;
+}
+#ics-button-download img {
+  width: 24px;
+  height: 24px;
+  opacity: 0.50;
+  filter: alpha(opacity=50);
+  /* For IE8 and earlier */
+}
+.calendar-header {
+  overflow: none;
+  padding: 30px;
+  border: thin solid #AAA;
+  width: 100%;
+  color: white;
+  #background: #338AC0;
+  margin-bottom: 0px;
+  border-top-left-radius: .5em;
+  border-top-right-radius: .5em;
+  text-align: center;
+  padding: 5px;
+  background: -webkit-linear-gradient(#558cca, #338AC0, #438Ad0);
+  /* For Safari 5.1 to 6.0 */
+  
+  background: -o-linear-gradient(#558cca, #338AC0, #438Ad0);
+  /* For Opera 11.1 to 12.0 */
+  
+  background: -moz-linear-gradient(#558cca, #338AC0, #438Ad0);
+  /* For Firefox 3.6 to 15 */
+  
+  background: linear-gradient(#558cca, #338AC0, #438Ad0);
+  /* Standard syntax */
+}
+.calendar-header label {
+  text-shadow: 0px 1px black !important;
+  font-family: optima, helvetica;
+}
+.calendar-column-header {
+  overflow: none;
+  width: 14.285%;
+  color: #ca9;
+  padding-left: 10px;
+  text-align: center;
+  font-family: eurostile, futura, arial;
+  font-size: 15px;
+
+  background: -webkit-linear-gradient(#304050, #20405a, #304070);
+  /* For Safari 5.1 to 6.0 */
+  
+  background: -o-linear-gradient(#304050, #20405a, #304070);
+  /* For Opera 11.1 to 12.0 */
+  
+  background: -moz-linear-gradient(#304050, #20405a, #304070);
+  /* For Firefox 3.6 to 15 */
+  
+  background: linear-gradient(#304050, #20405a, #304070);
+  /* Standard syntax */
+}
+.calendar-day {
+  position: relative;
+  overflow: none;
+  border: 1px solid #AAA;
+  height: 100px;
+  width: 14.285%;
+  vertical-align: top;
+  background: white;
+  padding-bottom: 25px;
+  box-shadow: 0 1px 1px #fed inset;
+}
+.calendar-day-inactive {
+  background: #BBB;
+}
+.calendar-items {
+  /* min-height: 80px; This doesn't allow you to shrink height of calendar */
+}
+.calendar-item {
+  background-color: #BAEAFF;
+  padding: 0px 3px;
+  margin-bottom: 2px;
+  cursor: pointer;
+  box-shadow: 1px 1px 5px #559;
+  font-family: Franklin Gothic Book, DIN alternate, corbel;
+}
+.calendar-item a {
+  text-decoration: none !important;
+  color: white;
+  cursor: pointer;
+}
+.calendar-item-marker {
+  background: #BDF;
+}
+.calendar-item-title {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  line-height: 1.5em;
+  max-height: 3em;
+}
+.calendar-item-category-general {
+  background: #35B !important;
+}
+.calendar-item-category-holidays {
+  background: #50BA40 !important;
+}
+.calendar-item-category-3rdpartychange {
+  background: #F80 !important;
+}
+.calendar-item-category-projectdeadline {
+  background: #C20 !important;
+}
+.calendar-item-category-mainproductrelease {
+  background: #A36 !important;
+}
+.hide-overflow-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: flex;
+}
+.date {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  margin: 0px;
+  color: grey;
+  font-weight: bold;
+}
+.gridNotInMonth {
+  background: #EEE;
+}
+.gridNotInMonth .calendar-item {
+  color: #BBC
+}
+.grid1, .grid7 {
+  background: #eafaff;
+}
+.tooltip {
+  width: 500px;
+}
+.inline {
+  display: inline;
+  padding: 0px 5px;
+}
+.btn-primary {
+  background-color: #5095c5;
+}
+.modal-box {
+  border: 2px #EEE solid;
+  border-radius: .8em;
+  background: #9AD0EA;
+  padding: 0;
+  position: fixed;
+  box-shadow: 2px 2px 12px #158;
+}
+.modal-toolbar {
+  border-top-left-radius: .4em;
+  border-top-right-radius: .4em;
+  color: white;
+  text-shadow: 0px 1px black !important;
+  background-color: #39C;
+  margin: 0px;
+  padding: 5px 30px;
+  text-align: center;
+  font-size: x-large;
+  border-bottom: 1px #777 solid;
+
+  background: -webkit-linear-gradient(rgba(85, 140, 202, 0.74), #338AC0, #438Ad0);
+  /* For Safari 5.1 to 6.0 */
+  
+  background: -o-linear-gradient(rgba(85, 140, 202, 0.74), #338AC0, #438Ad0);
+  /* For Opera 11.1 to 12.0 */
+  
+  background: -moz-linear-gradient(rgba(85, 140, 202, 0.74), #338AC0, #438Ad0);
+  /* For Firefox 3.6 to 15 */
+  
+  background: linear-gradient(rgba(85, 140, 202, 0.74), #338AC0, #438Ad0);
+  /* Standard syntax */
+}
+.modal-toolbar label {
+  color: white;
+  text-shadow: 0px 1px black !important;
+}
+.modal-toolbar-close {
+  position: absolute;
+  right: 10px;
+  top: 7px;
+  border: thin solid #855;
+  border-radius: 1em;
+  width: 15px;
+  height: 15px;
+  color: #C05;
+  background-color: #C40;
+  font-size: xx-small;
+  background: -webkit-linear-gradient(white, red, #955);
+  /* For Safari 5.1 to 6.0 */
+  
+  background: -o-linear-gradient(white, red, #955);
+  /* For Opera 11.1 to 12.0 */
+  
+  background: -moz-linear-gradient(white, red, #955);
+  /* For Firefox 3.6 to 15 */
+  
+  background: linear-gradient(#ECC, red, #955);
+  /* Standard syntax */
+  
+  cursor: pointer;
+}
+.modal-body {
+  display: flex; // Allows height of floating children elements to be considered when sizing height of parent element
+  padding: 5px;
+}
+.event-creation-box {
+  width: 520px;
+  left: 21%;
+  top: 15%;
+  z-index: 2;
+}
+.event-creation-box-grouping {
+  width: 50%;
+  float: left;
+  padding-left: 10px;
+}
+#event-creation-submit-buttons {
+  position: absolute;
+  right: 5px;
+  bottom: -15px;
+}
+.event-search-box {
+  width: 38%;
+  left: 21%;
+  top: 35%;
+  z-index: 1;
+}
+.add-item {
+  visibility: hidden;
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  margin: 0px;
+  border-radius: .3em;
+  width: 20px;
+  text-align: center;
+  color: #79B;
+  background: #E0F0FA;
+  box-shadow: 0 0 2px #bbd;
+}
+.calendar-day:hover {
+  background-color: #F7FEFF;
+}
+.calendar-day:hover .add-item {
+  display: block;
+  visibility: visible;
+  cursor: pointer;
+}
+.is-selected {
+  background: #fcfaea !important;
+}
+.is-today {
+  background: #c0dafa !important;
+}
+.three-d {
+  border: 1px solid #359;
+  border-top-color: #16a;
+  border-bottom-color: #46a;
+  border-left-color: #079;
+  border-right-color: #377;
+  background: -webkit-linear-gradient(#138AC0, #138AC0, #27b);
+  /* For Safari 5.1 to 6.0 */
+  
+  background: -o-linear-gradient(#138AC0, #138AC0, #27b);
+  /* For Opera 11.1 to 12.0 */
+  
+  background: -moz-linear-gradient(#138AC0, #138AC0, #27b);
+  /* For Firefox 3.6 to 15 */
+  
+  background: linear-gradient(#138AC0, #138AC0, #27b);
+  /* Standard syntax */
+
+
+  box-shadow: inset -2px 2px 3px #1392d4, 3px 3px 4px -3px #56c;
+}
+.three-d:active {
+    box-shadow: inset -2px 2px 8px #036790 !important;
+}
+.round {
+  border-radius: 1em !important;
+}
+.round-left {
+  border-top-left-radius: 1em !important;
+  border-bottom-left-radius: 1em !important;
+  border-top-right-radius: 0.3em !important;
+  border-bottom-right-radius: 0.3em !important;
+}
+.round-right {
+  border-top-right-radius: 1em !important;
+  border-bottom-right-radius: 1em !important;
+  border-top-left-radius: 0.3em !important;
+  border-bottom-left-radius: 0.3em !important;
+}
+.pointer {
+  cursor: pointer;
+}
+#search-results {
+  background: #f8faff;
+  padding: 5px;
+  margin: 5px;
+  border-radius: .2em;
+  border: thin solid #777;
+}
+#row-count-spinner {
+  color: black;
+  position: absolute;
+  right: 180px;
+}
+#row-count-spinner input {
+  width: 50px;
+}
+#filter-button {
+  position: absolute;
+  right: 110px;
+}
+#search-button {
+  position: absolute;
+  right: 50px;
+}
+#search-results label {
+  cursor: pointer;
+}
+.no-issue-link {
+  width: 20%;
+  display: inline-block;
+  text-decoration: none !important;
+  background-color: #CEF;
+  border-top-right-radius: .4em;
+  border-bottom-right-radius: .4em;
+}
+.issue-link {
+  width: 20%;
+  display: inline-block;
+  text-decoration: none !important;
+  border-top-right-radius: 1em;
+  border-bottom-right-radius: 1em;
+  background: -webkit-linear-gradient(#7BF, #138AC0, #159);
+  /* For Safari 5.1 to 6.0 */
+  
+  background: -o-linear-gradient(#7BF, #138AC0, #159);
+  /* For Opera 11.1 to 12.0 */
+  
+  background: -moz-linear-gradient(#7BF, #138AC0, #159);
+  /* For Firefox 3.6 to 15 */
+  
+  background: linear-gradient(#800, #904, #505);
+  /* Standard syntax */
+}
+.no-auto-create {
+  width: 20%;
+  display: inline-block;
+  text-decoration: none !important;
+  border-top-right-radius: 1em;
+  border-bottom-right-radius: 1em;
+  background: -webkit-linear-gradient(#7BF, #138AC0, #159);
+  /* For Safari 5.1 to 6.0 */
+  
+  background: -o-linear-gradient(#7BF, #138AC0, #159);
+  /* For Opera 11.1 to 12.0 */
+  
+  background: -moz-linear-gradient(#7BF, #138AC0, #159);
+  /* For Firefox 3.6 to 15 */
+  
+  background: linear-gradient(#444, #777, #555);
+  /* Standard syntax */
+}
+.input-group {
+  width: 100%;
+}
+#selected-day-distance {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: black;
+  color: white;
+  border: solid thin grey;
+  border-radius: .8em;
+  padding: 2px;
+}
+/* Disable box surrounded buttons when clicked */
+
+:focus {
+  outline: none !important;
+}
+::-moz-focus-inner {
+  border: 0 !important;
+}
+
+.filter-panel {
+  display: table;
+  position: relative;
+  margin: 20px;
+  padding: 2px;
+  background: #138;
+  border: thin solid #388;
+}
+.filters {
+  margin-left: 60px;
+  position: relative;
+  padding: 5px;
+  background: white;
+  display: table-cell;
+}
+.filters-label {
+  width: 80px;
+  color: white;
+  background: #169;
+  padding-left: 5px;
+  display: table-cell;
+  box-shadow: 0px 0px 9px #029 inset;
+}

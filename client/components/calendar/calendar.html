@@ -1,0 +1,91 @@
+<div class="calendar" ng-controller="CalendarCtrl">
+  <div ng-include="'components/eventcreation/eventcreation.html'"></div>
+  <div ng-include="'components/eventsearch/eventsearch.html'"></div>
+  <div ng-include="'components/calendarfilter/calendarfilter.html'"></div>
+
+  <table class="calendar-grid">
+    <tr>
+      <td colspan="7">
+        <div class="calendar-header">
+          <div id="ics-container" ng-mouseenter="showIcsDownload=true" ng-mouseleave="showIcsDownload=false">
+            <div id="ics-button-open">
+              <a href="webcal://dig-tools.dev2000.com:9000/ics"><i class="fa fa-calendar fa-lg btn btn-primary three-d round" style="color:white;" />
+            </div>
+            <div style="box-shadow: 0 0 10px red inset;">
+              <div id="ics-button-download">
+                <a href="http://dig-tools.dev2000.com:9000/ics" target="_blank" ng-hide="!showIcsDownload">
+                  <img width="24px" height="24px" src="../assets/images/flaticon_download164.png" />
+                </a>
+              </div>
+            </div>
+          </div>
+          <h3>
+
+            <span class="input-group-btn inline">
+              <button type="submit" class="btn btn-primary three-d round-left" ng-click="previousMonth()">&#xab;</button>
+            </span>
+            <label class="pointer" ng-click="currentMonth()">{{monthName}}</label>
+            <span class="input-group-btn inline">
+              <button type="submit" class="btn btn-primary three-d round-right" ng-click="nextMonth()">&#xbb;</button>
+            </span>
+
+            <span id="row-count-spinner">
+              <input type="number" min="0" max="15" ng-model="options.rowCount">
+            </span>
+
+            <span id="filter-button">
+              <button type="submit" class="fa fa-filter fa-xs btn btn-primary three-d round" ng-click="showCalendarFilterModal()"></button>
+            </span>
+            <span id="search-button">
+              <button type="submit" class="fa fa-search fa-xs btn btn-primary three-d round" ng-click="showEventSearchModal()"></button>
+            </span>
+          </h3>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="calendar-column-header">Sunday</td>
+      <td class="calendar-column-header">Monday</td>
+      <td class="calendar-column-header">Tuesday</td>
+      <td class="calendar-column-header">Wednesday</td>
+      <td class="calendar-column-header">Thursday</td>
+      <td class="calendar-column-header">Friday</td>
+      <td class="calendar-column-header">Saturday</td>
+    </tr>
+
+    <tr class="calendar-row" ng-repeat="row in createRowArray()">
+      <td class="calendar-day grid{{$index + 1}} grid{{day.isInMonth}} {{day.isToday}} {{day.isSelected}}" ng-click="selectDate(day.date);" ng-repeat="day in calendarDays.slice((7*$index)-7, 7*$index)" ng-drop="true" ng-drop-success="onDropComplete($data,$event, day.date)">
+        <div class="calendar-items" ng-repeat="item in day.items">
+          <div class="calendar-item {{getItemCategoryClass(item.category)}}" ng-drag="true" ng-drag-data="item" ng-drag-success="onDragComplete($data,$event, day.date)" ng-center-anchor="true">
+
+            <!-- Event with long title -->
+            <a ng-if="item.title.length > 35" href="#" data-hint="{{item.title}}">
+              <div class="hide-overflow-ellipsis">
+                <span class="calendar-item-title">{{item.title}}</span>
+              </div>
+            </a>
+
+            <!-- Event with short title -->
+            <a ng-if="item.title.length <= 35" href="#">
+              <span class="calendar-item-title">{{item.title}}</span>
+            </a>
+          </div>
+
+        </div>
+
+        <p class="date">{{day.date.date()}}</p>
+        <p class="add-item" ng-click="addItemForDate(day.date);">+</p>
+      </td>
+    </tr>
+
+    <tr>
+      <td colspan="7">
+
+      </td>
+    </tr>
+
+  </table>
+
+  <p id="selected-day-distance" ng-bind="selectedDayDistance" ng-hide="selectedDayDistance === null || selectedDayDistance === '0 weeks' || selectedDayDistance === '1 weeks' || selectedDayDistance === '-1 weeks'" />
+</div>

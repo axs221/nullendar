@@ -1,0 +1,13 @@
+
+        <div ng-hide="!event.isNew">
+          <label>Recurring</label>
+          <div>
+            <input type="text" ng-model="event.recurringInstances" ng-keydown="inputKeyDown($event)">
+            <label> times</label>
+            <input type="text" ng-model="event.recurringAmount" ng-keydown="inputKeyDown($event)">
+            <select data-ng-model="event.selectedRecurringOption"
+                    data-ng-options="option for option in recurringOptions">
+            </select>
+            <label> apart</label>
+          </div>          
+        </div>

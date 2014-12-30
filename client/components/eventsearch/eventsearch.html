@@ -1,0 +1,24 @@
+<div ng-controller="EventSearchCtrl">
+<span ng-hide="!isModalVisible">
+
+  <div class="event-search-box modal-box" andy-draggable>
+    <div class="modal-toolbar">
+      <label>Search</label>
+      <div class="modal-toolbar-close" ng-click="hideModal()">x</div>
+    </div>
+    <div class="modal-body">
+    <form class="event-form">
+      <input id="search-term" type="text" onfocus="this.select();" ng-model="searchTerm" ng-keydown="inputKeyDown($event)">
+      <button type="submit" class="btn btn-primary" ng-click="getSearchResults()">Search</button>
+      <button type="submit" class="btn btn-primary" ng-click="deleteAllResults()">Delete All</button>
+      <div id="search-results">
+        <div ng-repeat="result in searchResults" ng-click="goToEvent(result)">
+          <a href="#" ng-bind="result.date" ng-click="goToEvent(result)"></a>
+          <label ng-bind="result.title"></label>
+        </div>
+      </div>
+    </form>
+    </div>
+  </div>
+</span>
+</div>

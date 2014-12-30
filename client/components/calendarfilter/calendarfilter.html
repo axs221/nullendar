@@ -1,0 +1,25 @@
+<div ng-controller="CalendarFilterCtrl">
+  <span ng-hide="!isModalVisible">
+    <div class="event-search-box modal-box" andy-draggable>
+    <div class="modal-toolbar">
+      <label>Filter</label>
+      <div class="modal-toolbar-close" ng-click="hideModal()">x</div>
+    </div>
+      <div class="filter-panel">
+        <div class="filters-label">Filters</div>
+        <div class="filters">
+          <div>
+            <label style="margin-right: 10px">Category Filter:</label>
+
+            <div ng-repeat="option in options.categoryOptions">
+              <span>
+                <input type="checkbox" ng-model="option.checked" ng-change="setupCalendar()" />
+                <label for="">{{option.name}}</label>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </span>
+</div>

@@ -1,0 +1,24 @@
+<div ng-if="!hasJiraIssue()">
+    <div class="btn-group">
+        <label class="btn btn-primary" ng-model="event.shouldAutoCreateIssueBeforeSprint" btn-radio="true">Create in Jira 3 weeks prior</label>
+        <label class="btn btn-primary" ng-model="event.shouldAutoCreateIssueBeforeSprint" btn-radio="false">Off</label>
+    </div>
+
+  <div ng-hide="!event.shouldAutoCreateIssueBeforeSprint">
+    <div>
+      <label>Enter a Jira Project:</label>
+      <input type="text"  ng-model="event.project" ng-keydown="inputKeyDown($event)" style="width: 50%;">
+    </div>
+    <div>
+      <label>Or select one previously used:</label><br/>
+      <select data-ng-model="event.project"
+              data-ng-options="option for option in event.jiraProjectOptions"
+              ng-keydown="inputKeyDown($event)" />
+    </div>
+  </div>
+</div>
+
+<div ng-if="hasJiraIssue()">
+  <button type="submit" class="btn btn-primary" ng-click="openIssueForEvent()" ng-keydown="inputKeyDown($event)">{{ "Open->Jira" }}</button>
+  <input type="text"  ng-model="event.issue" ng-keydown="inputKeyDown($event)" style="width: 50%;">
+</div>

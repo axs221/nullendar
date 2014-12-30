@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.8.5/css/selectize.default.css">
+
+<div ng-controller="EventCreationCtrl">
+<span ng-hide="!isModalVisible">
+
+  <div class="event-creation-box modal-box" andy-draggable>
+    <div class="modal-toolbar">
+      <label>Event</label>
+      <div class="modal-toolbar-close" ng-click="event.IsNew ? hideEventCreationModal() : updateEvent() ">x</div>
+    </div>
+    <div class="modal-body">
+    <form class="event-form">
+      <p class="input-group">
+        <div id="event-creation-submit-buttons" ng-include="'components/eventcreation/eventcreation_submit.html'"></div>
+        <div class="event-creation-box-grouping" style="float:left;">
+          <div ng-include="'components/eventcreation/eventcreation_main.html'"></div>
+          <div ng-include="'components/eventcreation/eventcreation_reminder.html'"></div>
+        </div>
+        <div class="event-creation-box-grouping" style="float:left;">
+          <div ng-include="'components/eventcreation/eventcreation_project.html'"></div>
+          <hr/>
+          <div ng-include="'components/eventcreation/eventcreation_recurring.html'"></div>
+        </div>
+      </p>
+    </form>
+    </div>
+  </div>
+</span>
+</div>

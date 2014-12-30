@@ -1,0 +1,24 @@
+        <p class="input-group"> 
+          <input type="text" id="event-title" class="form-control" placeholder="Event Title" ng-model="event.title" ng-keydown="inputKeyDown($event)">
+        </p>
+
+        <p class="input-group"> 
+          <textarea rows="5" id="event-description" class="form-control" placeholder="Event Description" ng-model="event.description" ng-keydown="inputKeyDown($event)">
+          </textarea>
+        </p>
+
+        <p class="input-group"> 
+          <label>Category: </label>
+          <select data-ng-model="event.categoryObj"
+                  data-ng-options="option.name for option in options.categoryOptions.list track by option.id"
+                  ng-keydown="inputKeyDown($event)" />
+        </p>
+
+        <p class="input-group">
+          <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="event.date" is-open="options.opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" ng-keydown="inputKeyDown($event)" />
+          <span class="input-group-btn">
+            <button type="button" class="btn btn-default" ng-click="openCalendar($event)">
+              <i class="glyphicon glyphicon-calendar"></i>
+            </button>
+          </span>
+        </p>
